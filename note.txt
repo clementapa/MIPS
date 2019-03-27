@@ -1,0 +1,15 @@
+la $9,o1 charge l'adresse de o1 dans $9
+lw $10,0($9) charge la valeur qui est dans l'adresse de $9 dans $10
+sw $10,0($9) stock la valeur qui est dans $10 dans l'adresse qui se trouve dans $9
+Pas oublier de sw après un changement de valeur si on veut print
+lb pour charger un charactère
+ 
+1 nombre = 4 byte = 1 word
+1 charactère = 1 byte = 1 asciiz
+
+sw $9,0x10010000
+li $v0,1
+lw $a0,0x10010000
+syscall
+#si on veut afficher la valeur qui est dans $9.
+#pas oublier de stocker la valeur de $9 dand une case mémoire
